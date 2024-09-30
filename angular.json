@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "debug01-v18": {
+    "debug01": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/debug01-v18",
+            "outputPath": "dist/debug01",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "debug01-v18:build:production"
+              "buildTarget": "debug01:build:production"
             },
             "development": {
-              "buildTarget": "debug01-v18:build:development"
+              "buildTarget": "debug01:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "debug01-v18:build"
+            "buildTarget": "debug01:build"
           }
         },
         "test": {

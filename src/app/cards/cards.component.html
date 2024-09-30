@@ -1,0 +1,24 @@
+<section class="cards-container">
+  for (card of cards; track index) {
+    <article class="card" [ngClass]="cards.discount = 'card-discount' : 'card-not-discount'">
+      <p class="discount" ngIf="cards.discount">
+        {{ cards.discount }}% de réduction !
+      </p>
+      if(cards.isFavorite) {
+        <p class="heart">&#10084;</p>
+      }
+      
+      <img src="cards.picture" [alt]="cards.tile" />
+      <h3>{ card.title }</h3>
+      <p>
+        { card.description }
+      </p>
+      <p>
+        Prix : { card.price } Euros
+      </p>
+      <footer>
+        <button [clicke]="addToFavorite(card)">J'aime</button>
+      </footer>
+    </article>
+  }
+</section>
